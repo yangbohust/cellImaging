@@ -1,0 +1,961 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWidgetClass</class>
+ <widget class="QMainWindow" name="MainWidgetClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1367</width>
+    <height>866</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>600</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWidget</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>11</x>
+      <y>11</y>
+      <width>491</width>
+      <height>771</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="currentIndex">
+     <number>2</number>
+    </property>
+    <widget class="QWidget" name="tab_DataList">
+     <attribute name="title">
+      <string>数据列表</string>
+     </attribute>
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="0" column="0">
+       <widget class="QTableWidget" name="tableWidget">
+        <property name="minimumSize">
+         <size>
+          <width>480</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="horizontalScrollBarPolicy">
+         <enum>Qt::ScrollBarAlwaysOff</enum>
+        </property>
+        <property name="editTriggers">
+         <set>QAbstractItemView::NoEditTriggers</set>
+        </property>
+        <property name="selectionMode">
+         <enum>QAbstractItemView::SingleSelection</enum>
+        </property>
+        <property name="selectionBehavior">
+         <enum>QAbstractItemView::SelectRows</enum>
+        </property>
+        <property name="showGrid">
+         <bool>false</bool>
+        </property>
+        <property name="rowCount">
+         <number>4</number>
+        </property>
+        <attribute name="horizontalHeaderDefaultSectionSize">
+         <number>160</number>
+        </attribute>
+        <attribute name="verticalHeaderVisible">
+         <bool>false</bool>
+        </attribute>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <column>
+         <property name="text">
+          <string>数据加载方式</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>数据格式</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>数据类型</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>内存开销</string>
+         </property>
+        </column>
+        <item row="0" column="0">
+         <property name="text">
+          <string>In Core网格数据</string>
+         </property>
+        </item>
+        <item row="1" column="0">
+         <property name="text">
+          <string>In Core体数据</string>
+         </property>
+        </item>
+        <item row="2" column="0">
+         <property name="text">
+          <string>Out of Core网格数据</string>
+         </property>
+        </item>
+        <item row="3" column="0">
+         <property name="text">
+          <string>Out of Core体数据</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QWidget" name="tab_Show">
+     <attribute name="title">
+      <string>显示</string>
+     </attribute>
+     <widget class="QSlider" name="horizontalSlider">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>50</y>
+        <width>471</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>61</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>切片位置</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>90</y>
+        <width>81</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>播放</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit">
+      <property name="geometry">
+       <rect>
+        <x>312</x>
+        <y>90</y>
+        <width>111</width>
+        <height>21</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>431</x>
+        <y>90</y>
+        <width>41</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>帧/秒</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>170</y>
+        <width>72</width>
+        <height>15</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>窗宽/窗位</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_2">
+      <property name="geometry">
+       <rect>
+        <x>372</x>
+        <y>250</y>
+        <width>101</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>重置窗宽窗位</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>200</y>
+        <width>51</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>窗宽：</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>230</y>
+        <width>51</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>窗位：</string>
+      </property>
+     </widget>
+     <widget class="QDoubleSpinBox" name="doubleSpinBox">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>230</y>
+        <width>111</width>
+        <height>22</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QDoubleSpinBox" name="doubleSpinBox_2">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>200</y>
+        <width>111</width>
+        <height>22</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_Tools">
+     <attribute name="title">
+      <string>工具</string>
+     </attribute>
+     <widget class="QLabel" name="label_6">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>72</width>
+        <height>15</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>图像工具</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_7">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>260</y>
+        <width>41</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>控件</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_8">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>100</y>
+        <width>31</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>左旋</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_9">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>100</y>
+        <width>31</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>右旋</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_10">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>100</y>
+        <width>61</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>垂直镜像</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_11">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>190</y>
+        <width>61</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>反转灰度</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_12">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>190</y>
+        <width>51</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>直方图</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_13">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>190</y>
+        <width>51</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_14">
+      <property name="geometry">
+       <rect>
+        <x>390</x>
+        <y>100</y>
+        <width>61</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>水平镜像</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_15">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>190</y>
+        <width>61</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>操作手柄</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_16">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>350</y>
+        <width>31</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>直线</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_17">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>350</y>
+        <width>31</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>角度</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_18">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>350</y>
+        <width>31</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>伪彩</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_19">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>350</y>
+        <width>31</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>矩形</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_20">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>460</y>
+        <width>31</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>多边形</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_21">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>460</y>
+        <width>31</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>椭圆</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_22">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>530</y>
+        <width>61</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>测量工具</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_23">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>580</y>
+        <width>41</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>面积：</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_24">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>610</y>
+        <width>41</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>体积：</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_2">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>580</y>
+        <width>113</width>
+        <height>21</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_3">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>610</y>
+        <width>113</width>
+        <height>21</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_25">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>580</y>
+        <width>72</width>
+        <height>15</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>直线距离：</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_4">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>580</y>
+        <width>113</width>
+        <height>21</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="open">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>10</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>显示</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="leftRotate">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>70</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>leftRotate</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="rightRotate">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>70</y>
+        <width>101</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>rightRotate</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="vertical">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>70</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>vertical</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="horizontal">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>70</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>horizontal</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="graycolor">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>160</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>graycolor</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="hitogram">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>160</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>hitogram</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="operator_2">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>160</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>operator</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>550</y>
+      <width>611</width>
+      <height>241</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>-1</number>
+    </property>
+   </widget>
+   <widget class="QGLMitkWidget" name="showwidget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>520</x>
+      <y>30</y>
+      <width>831</width>
+      <height>771</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1367</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_D">
+    <property name="title">
+     <string>开始(&amp;D)</string>
+    </property>
+    <addaction name="action_DICOMDIR"/>
+    <addaction name="separator"/>
+    <addaction name="action_machine"/>
+    <addaction name="action_experiment"/>
+    <addaction name="separator"/>
+    <addaction name="action_open"/>
+    <addaction name="action_save"/>
+   </widget>
+   <widget class="QMenu" name="menu_R">
+    <property name="title">
+     <string>重建(&amp;R)</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menu_S">
+    <property name="title">
+     <string>分割(&amp;S)</string>
+    </property>
+    <widget class="QMenu" name="menu_4">
+     <property name="title">
+      <string>活动轮廓模型</string>
+     </property>
+     <addaction name="action_12"/>
+     <addaction name="action_13"/>
+    </widget>
+    <addaction name="action_8"/>
+    <addaction name="action_9"/>
+    <addaction name="action_10"/>
+    <addaction name="menu_4"/>
+   </widget>
+   <widget class="QMenu" name="menu_V">
+    <property name="title">
+     <string>可视化(&amp;V)</string>
+    </property>
+    <widget class="QMenu" name="menu_3">
+     <property name="title">
+      <string>体绘制</string>
+     </property>
+     <addaction name="action_3"/>
+     <addaction name="action_5"/>
+     <addaction name="action_6"/>
+    </widget>
+    <addaction name="action_0"/>
+    <addaction name="menu_3"/>
+   </widget>
+   <widget class="QMenu" name="menu_W">
+    <property name="title">
+     <string>窗口(&amp;W)</string>
+    </property>
+    <addaction name="actionX_Y"/>
+    <addaction name="actionX_Z"/>
+    <addaction name="actionY_Z"/>
+    <addaction name="separator"/>
+    <addaction name="action_15"/>
+    <addaction name="action_16"/>
+    <addaction name="action_17"/>
+    <addaction name="separator"/>
+    <addaction name="action_19"/>
+    <addaction name="action_20"/>
+   </widget>
+   <widget class="QMenu" name="menu_H">
+    <property name="title">
+     <string>帮助(&amp;H)</string>
+    </property>
+    <addaction name="action_1"/>
+    <addaction name="action_2"/>
+   </widget>
+   <widget class="QMenu" name="menu_C">
+    <property name="title">
+     <string>系统(&amp;C)</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menu_P">
+    <property name="title">
+     <string>预处理(&amp;P)</string>
+    </property>
+   </widget>
+   <addaction name="menu_D"/>
+   <addaction name="menu_C"/>
+   <addaction name="menu_P"/>
+   <addaction name="menu_R"/>
+   <addaction name="menu_S"/>
+   <addaction name="menu_V"/>
+   <addaction name="menu_W"/>
+   <addaction name="menu_H"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="action_1">
+   <property name="text">
+    <string>手册(&amp;M)</string>
+   </property>
+  </action>
+  <action name="action_2">
+   <property name="text">
+    <string>关于(&amp;A)</string>
+   </property>
+  </action>
+  <action name="action_DICOMDIR">
+   <property name="text">
+    <string>从DICOMDIR读取</string>
+   </property>
+  </action>
+  <action name="action_open">
+   <property name="text">
+    <string>导入数据...</string>
+   </property>
+  </action>
+  <action name="action_7">
+   <property name="text">
+    <string>导出体数据</string>
+   </property>
+  </action>
+  <action name="action_Ply">
+   <property name="text">
+    <string>导入一个Ply文件</string>
+   </property>
+  </action>
+  <action name="action_Stl">
+   <property name="text">
+    <string>导入一个Stl文件</string>
+   </property>
+  </action>
+  <action name="action_Raw">
+   <property name="text">
+    <string>导入一个Raw文件</string>
+   </property>
+  </action>
+  <action name="action_IM0">
+   <property name="text">
+    <string>导入一个IM0文件</string>
+   </property>
+  </action>
+  <action name="action_0">
+   <property name="text">
+    <string>面绘制</string>
+   </property>
+  </action>
+  <action name="action_3">
+   <property name="text">
+    <string>CPU体绘制</string>
+   </property>
+  </action>
+  <action name="action_5">
+   <property name="text">
+    <string>基于CUD的体绘制</string>
+   </property>
+  </action>
+  <action name="action_6">
+   <property name="text">
+    <string>GLSL体绘制</string>
+   </property>
+  </action>
+  <action name="action_8">
+   <property name="text">
+    <string>自动阈值分割</string>
+   </property>
+  </action>
+  <action name="action_9">
+   <property name="text">
+    <string>GraphCut分割</string>
+   </property>
+  </action>
+  <action name="action_10">
+   <property name="text">
+    <string>区域生长分割</string>
+   </property>
+  </action>
+  <action name="action_12">
+   <property name="text">
+    <string>Snake模型</string>
+   </property>
+  </action>
+  <action name="action_13">
+   <property name="text">
+    <string>水平集方法</string>
+   </property>
+  </action>
+  <action name="actionX_Y">
+   <property name="text">
+    <string>X-Y切片视图</string>
+   </property>
+  </action>
+  <action name="actionX_Z">
+   <property name="text">
+    <string>X-Z切片视图</string>
+   </property>
+  </action>
+  <action name="actionY_Z">
+   <property name="text">
+    <string>Y-Z切片视图</string>
+   </property>
+  </action>
+  <action name="action_15">
+   <property name="text">
+    <string>上2下2视图</string>
+   </property>
+  </action>
+  <action name="action_16">
+   <property name="text">
+    <string>上1下3视图</string>
+   </property>
+  </action>
+  <action name="action_17">
+   <property name="text">
+    <string>左3右1视图</string>
+   </property>
+  </action>
+  <action name="action_19">
+   <property name="text">
+    <string>三维表面视图</string>
+   </property>
+  </action>
+  <action name="action_20">
+   <property name="text">
+    <string>三维体视图</string>
+   </property>
+  </action>
+  <action name="action_save">
+   <property name="text">
+    <string>导出数据...</string>
+   </property>
+  </action>
+  <action name="action_machine">
+   <property name="text">
+    <string>新建设备...</string>
+   </property>
+  </action>
+  <action name="action_experiment">
+   <property name="text">
+    <string>新建实验...</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>QGLMitkWidget</class>
+   <extends>QWidget</extends>
+   <header>QGLMitkWidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="mainwidget.qrc"/>
+ </resources>
+ <connections/>
+</ui>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TopTwoBottomTwo</class>
+ <widget class="QWidget" name="TopTwoBottomTwo">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>625</width>
+    <height>491</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>TopTwoBottomTwo</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QGLMitkWidget" name="threeDimentionalViewer" native="true"/>
+   </item>
+   <item row="1" column="0">
+    <widget class="QWidget" name="twoDimentionalViewerY" native="true"/>
+   </item>
+   <item row="0" column="1">
+    <widget class="QWidget" name="twoDimentionalViewerX" native="true"/>
+   </item>
+   <item row="1" column="1">
+    <widget class="QWidget" name="twoDimentionalViewerZ" native="true"/>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>QGLMitkWidget</class>
+   <extends>QWidget</extends>
+   <header>qglmitkwidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
